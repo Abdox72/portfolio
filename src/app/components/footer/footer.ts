@@ -15,7 +15,7 @@ export class FooterComponent {
   socialLinks = [
     { icon: 'linkedin', url: 'https://linkedin.com/in/mr-dox', label: 'LinkedIn' },
     { icon: 'code', url: 'https://github.com/Abdox72', label: 'GitHub' },
-    { icon: 'email', url: 'mailto:Abdomostafa952001@gmail.com', label: 'Email' }
+    { icon: 'email', url: 'mailto:abdomostafa952001@gmail.com', label: 'Email' }
   ];
 
   openUrl(url: string): void {

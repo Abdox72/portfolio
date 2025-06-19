@@ -15,7 +15,6 @@ import { FooterComponent } from './components/footer/footer';
   standalone: true,
   imports: [
     CommonModule, 
-    RouterOutlet,
     HeaderComponent,
     HeroComponent,
     AboutComponent,
