@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="header-content">
+    <div class="logo">
+      <h2>Abdul-Rahman Mustafa</h2>
+      <span class="subtitle">.NET Developer | Software Engineer</span>
+    </div>
+    
+    <nav class="desktop-nav">
+      <button 
+        mat-button 
+        *ngFor="let item of menuItems" 
+        (click)="scrollToSection(item.anchor)"
+        class="nav-button">
+        {{ item.label }}
+      </button>
+    </nav>
+
+    <div class="mobile-nav">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button 
+          mat-menu-item 
+          *ngFor="let item of menuItems" 
+          (click)="scrollToSection(item.anchor)">
+          {{ item.label }}
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

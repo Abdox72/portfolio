@@ -1,0 +1,86 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>My Projects</h2>
+      <p>Showcasing my latest work and achievements</p>
+    </div>
+    
+    <div class="projects-filter">
+      <mat-tab-group (selectedTabChange)="onCategoryChange($event.tab.textLabel.toLowerCase().replace(' ', ''))">
+        <mat-tab *ngFor="let category of categories" [label]="category.label"></mat-tab>
+      </mat-tab-group>
+    </div>
+    
+    <div class="projects-grid">
+      <mat-card class="project-card" *ngFor="let project of filteredProjects">
+        <div class="project-image">
+          <img [src]="project.imageUrl" style="width: 100%; height: auto;" [alt]="project.title">
+          <div class="project-overlay">
+            <div class="project-actions">
+              <button 
+                mat-icon-button 
+                color="primary" 
+                *ngIf="project.githubUrl"
+                (click)="openUrl(project.githubUrl)"
+                class="action-button">
+                <mat-icon>code</mat-icon>
+              </button>
+              <button 
+                mat-icon-button 
+                color="primary" 
+                *ngIf="project.liveUrl"
+                (click)="openUrl(project.liveUrl)"
+                class="action-button">
+                <mat-icon>visibility</mat-icon>
+              </button>
+            </div>
+          </div>
+          <div class="featured-badge" *ngIf="project.featured">
+            <mat-icon>star</mat-icon>
+            Featured
+          </div>
+        </div>
+        
+        <mat-card-content>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-technologies">
+            <mat-chip *ngFor="let tech of project.technologies" color="primary" selected>
+              {{ tech }}
+            </mat-chip>
+          </div>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button 
+            mat-button 
+            color="primary" 
+            *ngIf="project.githubUrl"
+            (click)="openUrl(project.githubUrl)">
+            <mat-icon>code</mat-icon>
+            View Code
+          </button>
+          <button 
+            mat-raised-button 
+            color="primary" 
+            *ngIf="project.liveUrl"
+            (click)="openUrl(project.liveUrl)">
+            <mat-icon>launch</mat-icon>
+            Live Demo
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+    <div class="projects-summary" *ngIf="filteredProjects.length === 0">
+      <mat-card class="no-projects-card">
+        <mat-card-content>
+          <mat-icon>search_off</mat-icon>
+          <h3>No projects found</h3>
+          <p>No projects match the selected category. Try selecting a different category.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

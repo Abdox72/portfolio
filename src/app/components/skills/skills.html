@@ -1,0 +1,56 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Skills & Expertise</h2>
+      <p>Technologies and tools I work with</p>
+    </div>
+    
+    <div class="skills-grid">
+      <mat-card class="skill-category-card" *ngFor="let category of skillCategories">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>{{ getCategoryIcon(category) }}</mat-icon>
+            {{ categoryNames[category] }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="skills-list">
+            <div class="skill-item" *ngFor="let skill of getSkillsByCategory(category)">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+              <mat-progress-bar 
+                mode="determinate" 
+                [value]="skill.level"
+                class="skill-progress">
+              </mat-progress-bar>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    
+    <div class="skills-summary">
+      <mat-card class="summary-card">
+        <mat-card-content>
+          <h3>Technical Summary</h3>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <div class="summary-number">{{ skills.length }}</div>
+              <div class="summary-label">Technologies</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-number">{{ skillCategories.length }}</div>
+              <div class="summary-label">Categories</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-number">{{ getAverageSkillLevel() }}%</div>
+              <div class="summary-label">Average Proficiency</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

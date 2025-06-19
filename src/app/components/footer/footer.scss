@@ -1,0 +1,173 @@
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    margin-bottom: 8px;
+    
+    a {
+      color: #bdc3c7;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #3498db;
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  
+  .social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #34495e;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    mat-icon {
+      font-size: 20px;
+    }
+    
+    &:hover {
+      background: #3498db;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+  
+  .footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    p {
+      color: #bdc3c7;
+      font-size: 0.9rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      
+      .heart-icon {
+        color: #e74c3c;
+        font-size: 16px;
+        margin: 0 5px;
+        animation: heartbeat 2s infinite;
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-section {
+    h3 {
+      font-size: 1.3rem;
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .social-links {
+    gap: 12px;
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      
+      mat-icon {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .footer-bottom {
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

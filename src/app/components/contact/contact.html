@@ -1,0 +1,122 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <p>Let's work together on your next project</p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-form-section">
+        <mat-card class="contact-form-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>email</mat-icon>
+              Send Message
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <form (ngSubmit)="onSubmit()" class="contact-form">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="contactForm.name" name="name" required>
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="contactForm.email" name="email" type="email" required>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Subject</mat-label>
+                <input matInput [(ngModel)]="contactForm.subject" name="subject" required>
+                <mat-icon matSuffix>subject</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Message</mat-label>
+                <textarea matInput [(ngModel)]="contactForm.message" name="message" rows="5" required></textarea>
+                <mat-icon matSuffix>message</mat-icon>
+              </mat-form-field>
+              
+              <button mat-raised-button color="primary" type="submit" class="submit-button">
+                <mat-icon>send</mat-icon>
+                Send Message
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+      <div class="contact-info-section">
+        <mat-card class="contact-info-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>contact_phone</mat-icon>
+              Contact Information
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="contact-item">
+              <mat-icon>email</mat-icon>
+              <div class="contact-details">
+                <span class="label">Email</span>
+                <span class="value">{{ contactInfo.email }}</span>
+              </div>
+              <button mat-icon-button (click)="copyToClipboard(contactInfo.email)" class="copy-button">
+                <mat-icon>content_copy</mat-icon>
+              </button>
+            </div>
+            
+            <div class="contact-item">
+              <mat-icon>phone</mat-icon>
+              <div class="contact-details">
+                <span class="label">Phone</span>
+                <span class="value">{{ contactInfo.phone }}</span>
+              </div>
+              <button mat-icon-button (click)="copyToClipboard(contactInfo.phone)" class="copy-button">
+                <mat-icon>content_copy</mat-icon>
+              </button>
+            </div>
+            
+            <div class="contact-item">
+              <mat-icon>location_on</mat-icon>
+              <div class="contact-details">
+                <span class="label">Location</span>
+                <span class="value">{{ contactInfo.location }}</span>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="social-links-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>share</mat-icon>
+              Social Links
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="social-links">
+              <button mat-stroked-button (click)="openUrl(contactInfo.linkedin)" class="social-button">
+                <mat-icon>linkedin</mat-icon>
+                LinkedIn
+              </button>
+              
+              <button mat-stroked-button (click)="openUrl(contactInfo.github)" class="social-button">
+                <mat-icon>code</mat-icon>
+                GitHub
+              </button>
+              
+              <button mat-stroked-button class="social-button">
+                <mat-icon>twitter</mat-icon>
+                Twitter
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

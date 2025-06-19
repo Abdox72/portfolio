@@ -1,0 +1,102 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <p>Get to know me better</p>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <mat-card class="about-card">
+          <mat-card-content>
+            <h3>Professional Summary</h3>
+            <p>{{ aboutText }}</p>
+            
+            <div class="key-points">
+              <h4>What I bring to the table:</h4>
+              <ul>
+                <li *ngFor="let point of keyPoints">
+                  <mat-icon>check_circle</mat-icon>
+                  {{ point }}
+                </li>
+              </ul>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+      <div class="about-details">
+        <mat-card class="personal-info-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>person</mat-icon>
+              Personal Information
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="info-item">
+              <mat-icon>person_outline</mat-icon>
+              <span><strong>Name:</strong> {{ personalInfo.name }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>work</mat-icon>
+              <span><strong>Title:</strong> {{ personalInfo.title }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>location_on</mat-icon>
+              <span><strong>Location:</strong> {{ personalInfo.location }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>email</mat-icon>
+              <span><strong>Email:</strong> {{ personalInfo.email }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>phone</mat-icon>
+              <span><strong>Phone:</strong> {{ personalInfo.phone }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>link</mat-icon>
+              <span><strong>LinkedIn:</strong> {{ personalInfo.linkedin }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon>code</mat-icon>
+              <span><strong>GitHub:</strong> {{ personalInfo.github }}</span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="education-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>school</mat-icon>
+              Education
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="education-item" *ngFor="let edu of education">
+              <h4>{{ edu.degree }}</h4>
+              <p class="school">{{ edu.school }} • {{ edu.year }}</p>
+              <p class="description">{{ edu.description }}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="certifications-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>verified</mat-icon>
+              Certifications
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="certifications-list">
+              <mat-chip *ngFor="let cert of certifications" color="primary" selected>
+                {{ cert }}
+              </mat-chip>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
