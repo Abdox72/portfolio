@@ -19,7 +19,7 @@ export class PortfolioService {
         description: 'Admin & user roles; product & category management; user authentication; RESTful API backend.',
         technologies: ['ASP.NET Core Web API', 'Angular 19', 'MS SQL Server', 'JWT Auth'],
         imageUrl: 'assets/projects/ezz-store.png',
-        githubUrl: 'https://github.com/Abdox72/EzzStore',
+        githubUrl: 'https://github.com/Abdox72/',
         liveUrl: '',
         featured: true,
         category: 'web'
