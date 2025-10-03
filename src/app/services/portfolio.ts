@@ -12,129 +12,141 @@ export class PortfolioService {
   constructor() { }
 
   getProjects(): Observable<Project[]> {
-    const projects: Project[] = [
-      {
-        id: 1,
-        title: 'Ezz Store – Online Perfume & Oud Shop',
-        description: 'Admin & user roles; product & category management; user authentication; RESTful API backend.',
-        technologies: ['ASP.NET Core Web API', 'Angular 19', 'MS SQL Server', 'JWT Auth'],
-        imageUrl: 'assets/projects/ezz-store.png',
-        githubUrl: 'https://github.com/Abdox72/',
-        liveUrl: '',
-        featured: true,
-        category: 'web'
-      },
-      {
-        id: 2,
-        title: 'Supermarket Management System (WinForms)',
-        description: 'Admin & cashier roles; sales, inventory & category management; barcode-based lookup & sales processing.',
-        technologies: ['.NET WinForms', 'C#', 'SQL Server'],
-        imageUrl: 'assets/projects/supermarket.png',
-        githubUrl: 'https://github.com/Abdox72/SupermarketManagmentSystem_SMS',
-        liveUrl: '',
-        featured: false,
-        category: 'desktop'
-      },
-      {
-        id: 3,
-        title: 'Hotel Management System (WinForms)',
-        description: 'Room booking & availability; check‑in/out workflows; billing & reporting; role-based access.',
-        technologies: ['.NET WinForms', 'C#', 'SQL Server'],
-        imageUrl: 'assets/projects/hotelManagement.png',
-        githubUrl: 'https://github.com/Abdox72/Hotel-Management-System-WinForms',
-        liveUrl: '',
-        featured: false,
-        category: 'desktop'
-      },
-      {
-        id: 4,
-        title: 'E‑Commerce Angular App',
-        description: 'Product catalog with search & filters; cart & wishlist; secure payments; OAuth2 auth.',
-        technologies: ['Angular', 'Firebase Auth', 'Firestore', 'PayPal Sandbox'],
-        imageUrl: 'assets/projects/e-commerce.png',
-        githubUrl: 'https://github.com/Abdox72/ecommerce-angular',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 5,
-        title: 'Full‑Stack Django E‑Commerce',
-        description: 'Advanced product search; user profiles; admin dashboard; order management; JWT auth.',
-        technologies: ['Django', 'PostgreSQL', 'Django REST Framework', 'Bootstrap', 'JavaScript'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/Electro-ECommerce-Django',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 6,
-        title: 'SPA E‑Commerce (Vanilla JS & Firebase)',
-        description: 'Single‑page UX; dynamic cart & wishlist; real‑time updates; admin panel.',
-        technologies: ['ES6 JavaScript', 'Firebase Auth', 'Firestore'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/ecommerce',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 7,
-        title: 'School Management System',
-        description: 'Student & teacher profiles; attendance tracking; grading dashboard.',
-        technologies: ['Django', 'DTL', 'PostgreSQL', 'Bootstrap', 'JavaScript'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/SchoolManagementSystem',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 8,
-        title: 'Examination System (T‑SQL)',
-        description: 'Question bank; exam scheduling; automated grading; student/instructor role assignments.',
-        technologies: ['Microsoft SQL Server', 'T‑SQL', 'Stored Procedures'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/Examination_System',
-        liveUrl: '',
-        featured: false,
-        category: 'other'
-      },
-      {
-        id: 9,
-        title: 'Travelling Website',
-        description: 'Interactive destination galleries; map integration; PWA‑ready.',
-        technologies: ['HTML5', 'CSS3', 'jQuery', 'JavaScript'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/Travelling-Project',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 10,
-        title: 'Pharaoh Website',
-        description: 'SEO‑optimized; mobile‑first design; semantic markup.',
-        technologies: ['HTML5', 'CSS3', 'JavaScript'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/Pharaoh',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      },
-      {
-        id: 11,
-        title: 'Danita UI Website',
-        description: 'Pixel‑perfect reproduction; fully responsive; cross‑browser compatibility.',
-        technologies: ['HTML5', 'CSS3', 'jQuery', 'JavaScript'],
-        imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
-        githubUrl: 'https://github.com/Abdox72/Dantia-Project',
-        liveUrl: '',
-        featured: false,
-        category: 'web'
-      }
-    ];
+const projects: Project[] = [
+  {
+    id: 1,
+    title: 'Ezz Store – Online Perfume & Oud Shop',
+    description: 'Admin & user roles; product & category management; user authentication; RESTful API backend; Chatbot integration; Dashboard analytics; Orders management.',
+    technologies: ['ASP.NET Core Web API', 'Angular 19', 'MS SQL Server', 'JWT Auth'],
+    imageUrl: 'assets/projects/ezz-store.png',
+    githubUrl: 'https://github.com/Abdox72/',
+    liveUrl: '',
+    featured: true,
+    category: 'web'
+  },
+  {
+    id: 2,
+    title: 'Center Management System (WinForms)',
+    description: 'Desktop app for course & student management, billing, POS, and attendance tracking.',
+    technologies: ['.NET WinForms', 'Entity Framework Core', 'SQL Server'],
+    imageUrl: 'assets/projects/Studetns.png',
+    githubUrl: 'https://github.com/Abdox72/', 
+    liveUrl: '',
+    featured: true,
+    category: 'desktop'
+  },
+  {
+    id: 3,
+    title: 'Supermarket Management System (WinForms)',
+    description: 'Admin & cashier roles; sales, inventory & category management; barcode-based lookup & sales processing.',
+    technologies: ['.NET WinForms', 'C#', 'SQL Server'],
+    imageUrl: 'assets/projects/supermarket.png',
+    githubUrl: 'https://github.com/Abdox72/',
+    liveUrl: '',
+    featured: false,
+    category: 'desktop'
+  },
+  {
+    id: 4,
+    title: 'Hotel Management System (WinForms)',
+    description: 'Room booking & availability; check-in/out workflows; billing & reporting; role-based access.',
+    technologies: ['.NET WinForms', 'C#', 'SQL Server'],
+    imageUrl: 'assets/projects/hotelManagement.png',
+    githubUrl: 'https://github.com/Abdox72/Hotel-Management-System-WinForms',
+    liveUrl: '',
+    featured: false,
+    category: 'desktop'
+  },
+  {
+    id: 5,
+    title: 'E-Commerce Angular App',
+    description: 'Product catalog with search & filters; cart & wishlist; secure payments; OAuth2 auth.',
+    technologies: ['Angular', 'Firebase Auth', 'Firestore', 'PayPal Sandbox'],
+    imageUrl: 'assets/projects/e-commerce.png',
+    githubUrl: 'https://github.com/Abdox72/ecommerce-angular',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 6,
+    title: 'Full-Stack Django E-Commerce',
+    description: 'Advanced product search; user profiles; admin dashboard; order management; JWT auth.',
+    technologies: ['Django', 'PostgreSQL', 'Django REST Framework', 'Bootstrap', 'JavaScript'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/Electro-ECommerce-Django',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 7,
+    title: 'SPA E-Commerce (Vanilla JS & Firebase)',
+    description: 'Single-page UX; dynamic cart & wishlist; real-time updates; admin panel.',
+    technologies: ['ES6 JavaScript', 'Firebase Auth', 'Firestore'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/ecommerce',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 8,
+    title: 'School Management System',
+    description: 'Student & teacher profiles; attendance tracking; grading dashboard.',
+    technologies: ['Django', 'DTL', 'PostgreSQL', 'Bootstrap', 'JavaScript'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/SchoolManagementSystem',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 9,
+    title: 'Examination System (T-SQL)',
+    description: 'Question bank; exam scheduling; automated grading; student/instructor role assignments.',
+    technologies: ['Microsoft SQL Server', 'T-SQL', 'Stored Procedures'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/Examination_System',
+    liveUrl: '',
+    featured: false,
+    category: 'other'
+  },
+  {
+    id: 10,
+    title: 'Travelling Website',
+    description: 'Interactive destination galleries; map integration; PWA-ready.',
+    technologies: ['HTML5', 'CSS3', 'jQuery', 'JavaScript'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/Travelling-Project',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 11,
+    title: 'Pharaoh Website',
+    description: 'SEO-optimized; mobile-first design; semantic markup.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/Pharaoh',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  },
+  {
+    id: 12,
+    title: 'Danita UI Website',
+    description: 'Pixel-perfect reproduction; fully responsive; cross-browser compatibility.',
+    technologies: ['HTML5', 'CSS3', 'jQuery', 'JavaScript'],
+    imageUrl: 'assets/placeholder-icon-design-free-vector.jpg',
+    githubUrl: 'https://github.com/Abdox72/Dantia-Project',
+    liveUrl: '',
+    featured: false,
+    category: 'web'
+  }
+];
+
     return of(projects);
   }
 
